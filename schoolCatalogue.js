@@ -43,12 +43,8 @@ class Primary extends School {
     }
 }
 
-const lakePrimary = new Primary('Lake Primary', 'Pick-Up your dang kids');
-
-console.log(lakePrimary);
-
-console.log(lakePrimary.pickupPolicy);
-
-console.log(lakePrimary.quickFacts());
-
-
+class Middle extends School {
+    constructor(name) {
+        super(name, 'middle')
+    }
+}

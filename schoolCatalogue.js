@@ -32,5 +32,23 @@ class School {
     }
 }
 
-const lakeHighSchool = new School('Lake High School', 'high');
+class Primary extends School {
+    constructor(name, pickupPolicy) {
+        super(name, 'primary');
+        this._pickupPolicy = pickupPolicy;
+    }
+
+    get pickupPolicy() {
+        return this._pickupPolicy;
+    }
+}
+
+const lakePrimary = new Primary('Lake Primary', 'Pick-Up your dang kids');
+
+console.log(lakePrimary);
+
+console.log(lakePrimary.pickupPolicy);
+
+console.log(lakePrimary.quickFacts());
+
 

@@ -18,11 +18,16 @@ class School {
     }
 
     set numberOfStudents(newNumber) {
-        this._numberOfStudents = newNumber;
+        if (typeof newNumber === 'number') {
+          this._numberOfStudents = newNumber;  
+        } else {
+            console.log('Invalid input: numberOfStudents must be set to a Number.');
+        }
+        
     }
 
     quickFacts() {
-        return `Name: ${this._name}  Level: ${this._level}  # of Students: ${this._numberOfStudents}`
+        return `${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level.`
     }
 
     static pickSubstituteTeacher() {

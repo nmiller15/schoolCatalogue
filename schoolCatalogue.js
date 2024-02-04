@@ -48,3 +48,14 @@ class Middle extends School {
         super(name, 'middle')
     }
 }
+
+class High extends School {
+    constructor(name, sportsTeams) {
+        super(name, 'high');
+        this._sportsTeams = sportsTeams;
+    }
+
+    get sportsTeams() {
+        return this._sportsTeams;
+    }
+}
